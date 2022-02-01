@@ -9,36 +9,25 @@ def create_app():
     # Create flask object
     app = Flask(__name__)
     
-    # # Homepage route
-    # @app.route('/')
-    # def home_page():
-    #     '''Home view - returns a marketing page'''
-    #     return render_template('next.html', title='Home')
+    # Homepage route
+    @app.route('/', methods=["GET", "POST"])
+    def root():
+        '''Base view'''
+        return render_template('next.html', title='Home')
     
 
     # User route
     @app.route('/user', methods=['GET', 'POST'])
-    
-    results = []
-    
     def user():
         '''User view - input page for users'''
-        results.append(
-            (request.next.get("date_created"),
-            request.next.get("date_launched"),
-            request.next.get("number_of_backers"),
-            request.next.get("goal_amount"),
-            request.next.get("usd_pledged"),
-            request.next.get("month_launched"),
-            request.next.get("category"),
-            request.next.get("country_code"),
-            request.next.get("currency_code"),
-            request.next.get("is_it_a_staff_pick?"),
-            request.next.get("spotlight"))
-            )
+
+        if request.method == 'POST':
+            print('post request')
+            print(request.values)
+            print('user function running')
 
         return render_template('next.html', title='User')
 
-        
+
     return app
 

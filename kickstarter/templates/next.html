@@ -1,226 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kickstarter campaign success</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>Enter Kickstarter campaign features</h1>
-    <form>
-      <div class="form__fieldset">
-        <label for="date_created" class="form__label">Date Created:</label>
-        <input type="date" name="date_created" id="date_created" class="form__input" />
-      </div>
 
-      <div class="form__fieldset">
-        <label for="date_launched" class="form__label">Date Launched:</label>
-        <input type="date" name="date_launched" id="date_launched" class="form__input" />
-      </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kickstarter campaign success</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-      <div class="form__fieldset">
-        <label for="backers_count" class="form__label">Number of Backers:</label>
-        <input type="number" name="backers_count" id="backers_count" class="form__input" />
-      </div>
+<body>
+  <h1>Enter Kickstarter campaign features</h1>
+  <form action="/user" method="post">
+    <div class="form__fieldset">
+      <label for="date_created" class="form__label">Date Created:</label>
+      <input type="date" name="date_created" id="date_created" class="form__input" />
+    </div>
 
-      <div class="form__fieldset">
-        <label for="goal" class="form__label"> Goal Amount:</label>
-        <input type="number" name="goal" id="goal" class="form__input" />
-      </div>
+    <div class="form__fieldset">
+      <label for="date_launched" class="form__label">Date Launched:</label>
+      <input type="date" name="date_launched" id="date_launched" class="form__input" />
+    </div>
 
-      <div class="form__fieldset">
-        <label for="usd_pledged" class="form__label"> USD Pledged:</label>
-        <input type="number" name="usd_pledged" id="usd_pledged" class="form__input" />
-      </div>
+    <div class="form__fieldset">
+      <label for="backers_count" class="form__label">Number of Backers:</label>
+      <input type="number" name="backers_count" id="backers_count" class="form__input" />
+    </div>
 
-      <div class="form__fieldset">
-        <label for="month_launched" class="form__label">Month Launched:</label>
-        <select name="month_launched" id="month_launched" class="form__input form__select">
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3'">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
+    <div class="form__fieldset">
+      <label for="goal" class="form__label"> Goal Amount:</label>
+      <input type="number" name="goal" id="goal" class="form__input" />
+    </div>
+
+    <div class="form__fieldset">
+      <label for="usd_pledged" class="form__label"> USD Pledged:</label>
+      <input type="number" name="usd_pledged" id="usd_pledged" class="form__input" />
+    </div>
+
+    <div class="form__fieldset">
+      <label for="month_launched" class="form__label">Month Launched:</label>
+      <select name="month_launched" id="month_launched" class="form__input form__select">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3'">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+    </div>
+
+    <div class="form__fieldset">
+      <label for="category" class="form__label">Category (by frequency):</label>
+      <select name="category" id="category" class="form__input form__select">
+        <option value="product design">product design</option>
+        <option value="tabletop games">tabletop games</option>
+        <option value="web'">web</option>
+        <option value="graphic novels">graphic novels</option>
+        <option value="illustration">illustration</option>
+        <option value="comic books">comic books</option>
+        <option value="fiction">fiction</option>
+        <option value="video games">video games</option>
+        <option value="comedy">comedy</option>
+        <option value="playing cards">playing cards</option>
+        <option value="children's books">children's books</option>
+        <option value="accessories">accessories</option>
+        <option value="apps">apps</option>
+        <option value="documentary">documentary</option>
+        <option value="shorts">shorts</option>
+        <option value="drinks">drinks</option>
+        <option value="apparel">apparel</option>
+        <option value="gadgets">gadgets</option>
+        <option value="software">software</option>
+        <option value="restaurants">restaurants</option>
+        <option value="digital art">digital art</option>
+        <option value="nonfiction">nonfiction</option>
+        <option value="pop">pop</option>
+        <option value="small batch">small batch</option>
+        <option value="rock">rock</option>
+        <option value="animation">animation</option>
+        <option value="graphic design">graphic design</option>
+        <option value="hardware">hardware</option>
+        <option value="mixed media">mixed media/option>
+        <option value="drama">drama</option>
+        <option value="art books">art books</option>
+        <option value="country & folk">country & folk</option>
+        <option value="photobooks">photobooks</option>
+        <option value="painting">painting</option>
+        <option value="narrative film">narrative film</option>
+        <option value="classical music">classical music</option>
+        <option value="indie rock">indie rock</option>
+        <option value="webseries">webseries</option>
+        <option value="mobile games">mobile games</option>
+        <option value="electronic music">electronic music</option>
+        <option value="public art">public art</option>
+        <option value="hip-hop">hip-hop</option>
+        <option value="world music">world music</option>
+        <option value="performance art">performance art</option>
+        <option value="art">art</option>
+        <option value="food trucks">food trucks</option>
+        <option value="sculpture">sculpture</option>
+        <option value="jazz">jazz</option>
+        <option value="jewelry">jewelry</option>
+        <option value="wearables">wearables</option>
+        <option value="poetry">poetry</option>
+        <option value="horror">horror</option>
+        <option value="plays">plays</option>
+        <option value="diy">diy</option>
+        <option value="anthologies">anthologies</option>
+        <option value="farms">farms</option>
+        <option value="footwear">footwear</option>
+        <option value="woodworking">woodworking</option>
+        <option value="periodicals">periodicals</option>
+        <option value="faith">faith</option>
+        <option value="live games">live games</option>
+        <option value="diy electronics">diy electronics</option>
+        <option value="dance">dance</option>
+        <option value="webcomics">webcomics</option>
+        <option value="people">people</option>
+        <option value="radio & podcasts">radio & podcasts</option>
+        <option value="television">television</option>
+        <option value="crafts">crafts</option>
+        <option value="conceptual art">conceptual art</option>
+        <option value="academic">academic</option>
+        <option value="performances">performances</option>
+        <option value="ready-to-wear">ready-to-wear</option>
+        <option value="experimental">experimental</option>
+        <option value="young adult">young adult</option>
+        <option value="musical">musical</option>
+        <option value="sound">sound</option>
+        <option value="vegan">vegan</option>
+        <option value="thrillers">thrillers</option>
+        <option value="science fiction">science fiction</option>
+        <option value="festivals">festivals</option>
+        <option value="music">music</option>
+        <option value="events">events</option>
+        <option value="print">print</option>
+        <option value="action">action</option>
+        <option value="3d printing">3d printing</option>
+        <option value="metal">metal</option>
+        <option value="architecture">architecture</option>
+        <option value="fine art">fine art</option>
+        <option value="food">food</option>
+        <option value="music videos">music videos</option>
+        <option value="places">places</option>
+        <option value="cookbooks">cookbooks</option>
+        <option value="robots">robots</option>
+        <option value="design">design</option>
+        <option value="journalism">journalism</option>
+        <option value="childrenswear">childrenswear</option>
+        <option value="candles">candles</option>
+        <option value="zines">zines</option>
+        <option value="nature">nature</option>
+        <option value="gaming hardware">gaming hardware</option>
+        <option value="r&b">r&b</option>
+        <option value="installations">installations</option>
+        <option value="audio">audio</option>
+        <option value="camera equipment">camera equipment</option>
+        <option value="technology">technology</option>
+        <option value="interactive design">interactive design</option>
+        <option value="theater">theater</option>
+        <option value="publishing">publishing</option>
+        <option value="puzzles">puzzles</option>
+        <option value="calendars'">calendars</option>
+        <option value="toys">toys</option>
+        <option value="fantasy">fantasy</option>
+        <option value="ceramics">ceramics</option>
+        <option value="farmer's markets">farmer's markets</option>
+        <option value="video">video</option>
+        <option value="comics">comics</option>
+        <option value="textiles">textiles</option>
+        <option value="photography">photography</option>
+        <option value="punk">punk</option>
+        <option value="flight">flight</option>
+        <option value="literary journals">literary journals</option>
+        <option value="family">family</option>
+        <option value="immersive">immersive</option>
+        <option value="space exploration">space exploration</option>
+        <option value="movie theaters">movie theaters</option>
+        <option value="stationery">stationery</option>
+        <option value="film & video">film & video</option>
+        <option value="community gardens">community gardens"</option>
+        <option value="kids">kids</option>
+        <option value="civic design">civic design</option>
+        <option value="blues">blues</option>
+        <option value="printing">printing</option>
+        <option value="couture">couture</option>
+        <option value="fabrication tools">fabrication tools</option>
+        <option value="makerspaces">makerspaces</option>
+        <option value="video art">video art</option>
+        <option value="animals">animals</option>
+        <option value="romance">romance</option>
+        <option value="knitting">knitting</option>
+        <option value="games">games</option>
+        <option value="fashion">fashion</option>
+        <option value="photo">photo</option>
+        <option value="translations">translations</option>
+        <option value="literary spaces">literary spaces</option>
+        <option value="bacon">bacon</option>
+        <option value="crochet">crochet</option>
+        <option value="latin">latin</option>
+        <option value="pet fashion">pet fashion</option>
+        <option value="embroidery">embroidery</option>
+        <option value="workshops">workshops</option>
+        <option value="glass">glass</option>
+        <option value="pottery">pottery</option>
+        <option value="typography">typography</option>
+        <option value="social practice">social practice</option>
+        <option value="weaving">weaving</option>
+        <option value="letterpress">letterpress</option>
+        <option value="residencies">residencies</option>
+        <option value="quilts">quilts</option>
+        <option value="chiptune">chiptune</option>
+        <option value="taxidermy">taxidermy</option>
+        <option value="other"">other</option>
         </select>
       </div>
 
-      <div class="form__fieldset">
-        <label for="category" class="form__label">Category (by frequency):</label>
-        <select name="category" id="category" class="form__input form__select">
-            <option value="product design">product design</option>
-            <option value="tabletop games">tabletop games</option>
-            <option value="web'">web</option>
-            <option value="graphic novels">graphic novels</option>
-            <option value="illustration">illustration</option>
-            <option value="comic books">comic books</option>
-            <option value="fiction">fiction</option>
-            <option value="video games">video games</option>
-            <option value="comedy">comedy</option>
-            <option value="playing cards">playing cards</option>
-            <option value="children's books">children's books</option>
-            <option value="accessories">accessories</option>
-            <option value="apps">apps</option>
-            <option value="documentary">documentary</option>
-            <option value="shorts">shorts</option>
-            <option value="drinks">drinks</option>
-            <option value="apparel">apparel</option>
-            <option value="gadgets">gadgets</option>
-            <option value="software">software</option>
-            <option value="restaurants">restaurants</option>
-            <option value="digital art">digital art</option>
-            <option value="nonfiction">nonfiction</option>
-            <option value="pop">pop</option>
-            <option value="small batch">small batch</option>
-            <option value="rock">rock</option>
-            <option value="animation">animation</option>
-            <option value="graphic design">graphic design</option>
-            <option value="hardware">hardware</option>
-            <option value="mixed media">mixed media/option>
-            <option value="drama">drama</option>
-            <option value="art books">art books</option>
-            <option value="country & folk">country & folk</option>
-            <option value="photobooks">photobooks</option>
-            <option value="painting">painting</option>
-            <option value="narrative film">narrative film</option>
-            <option value="classical music">classical music</option>
-            <option value="indie rock">indie rock</option>
-            <option value="webseries">webseries</option>
-            <option value="mobile games">mobile games</option>
-            <option value="electronic music">electronic music</option>
-            <option value="public art">public art</option>
-            <option value="hip-hop">hip-hop</option>
-            <option value="world music">world music</option>
-            <option value="performance art">performance art</option>
-            <option value="art">art</option>
-            <option value="food trucks">food trucks</option>
-            <option value="sculpture">sculpture</option>
-            <option value="jazz">jazz</option>
-            <option value="jewelry">jewelry</option>
-            <option value="wearables">wearables</option>
-            <option value="poetry">poetry</option>
-            <option value="horror">horror</option>
-            <option value="plays">plays</option>
-            <option value="diy">diy</option>
-            <option value="anthologies">anthologies</option>
-            <option value="farms">farms</option>
-            <option value="footwear">footwear</option>
-            <option value="woodworking">woodworking</option>
-            <option value="periodicals">periodicals</option>
-            <option value="faith">faith</option>
-            <option value="live games">live games</option>
-            <option value="diy electronics">diy electronics</option>
-            <option value="dance">dance</option>
-            <option value="webcomics">webcomics</option>
-            <option value="people">people</option>
-            <option value="radio & podcasts">radio & podcasts</option>
-            <option value="television">television</option>
-            <option value="crafts">crafts</option>
-            <option value="conceptual art">conceptual art</option>
-            <option value="academic">academic</option>
-            <option value="performances">performances</option>
-            <option value="ready-to-wear">ready-to-wear</option>
-            <option value="experimental">experimental</option>
-            <option value="young adult">young adult</option>
-            <option value="musical">musical</option>
-            <option value="sound">sound</option>
-            <option value="vegan">vegan</option>
-            <option value="thrillers">thrillers</option>
-            <option value="science fiction">science fiction</option>
-            <option value="festivals">festivals</option>
-            <option value="music">music</option>
-            <option value="events">events</option>
-            <option value="print">print</option>
-            <option value="action">action</option>
-            <option value="3d printing">3d printing</option>
-            <option value="metal">metal</option>
-            <option value="architecture">architecture</option>
-            <option value="fine art">fine art</option>
-            <option value="food">food</option>
-            <option value="music videos">music videos</option>
-            <option value="places">places</option>
-            <option value="cookbooks">cookbooks</option>
-            <option value="robots">robots</option>
-            <option value="design">design</option>
-            <option value="journalism">journalism</option>
-            <option value="childrenswear">childrenswear</option>
-            <option value="candles">candles</option>
-            <option value="zines">zines</option>
-            <option value="nature">nature</option>
-            <option value="gaming hardware">gaming hardware</option>
-            <option value="r&b">r&b</option>
-            <option value="installations">installations</option>
-            <option value="audio">audio</option>
-            <option value="camera equipment">camera equipment</option>
-            <option value="technology">technology</option>
-            <option value="interactive design">interactive design</option>
-            <option value="theater">theater</option>
-            <option value="publishing">publishing</option>
-            <option value="puzzles">puzzles</option>
-            <option value="calendars'">calendars</option>
-            <option value="toys">toys</option>
-            <option value="fantasy">fantasy</option>
-            <option value="ceramics">ceramics</option>
-            <option value="farmer's markets">farmer's markets</option>
-            <option value="video">video</option>
-            <option value="comics">comics</option>
-            <option value="textiles">textiles</option>
-            <option value="photography">photography</option>
-            <option value="punk">punk</option>
-            <option value="flight">flight</option>
-            <option value="literary journals">literary journals</option>
-            <option value="family">family</option>
-            <option value="immersive">immersive</option>
-            <option value="space exploration">space exploration</option>
-            <option value="movie theaters">movie theaters</option>
-            <option value="stationery">stationery</option>
-            <option value="film & video">film & video</option>
-            <option value="community gardens">community gardens"</option>
-            <option value="kids">kids</option>
-            <option value="civic design">civic design</option>
-            <option value="blues">blues</option>
-            <option value="printing">printing</option>
-            <option value="couture">couture</option>
-            <option value="fabrication tools">fabrication tools</option>
-            <option value="makerspaces">makerspaces</option>
-            <option value="video art">video art</option>
-            <option value="animals">animals</option>
-            <option value="romance">romance</option>
-            <option value="knitting">knitting</option>
-            <option value="games">games</option>
-            <option value="fashion">fashion</option>
-            <option value="photo">photo</option>
-            <option value="translations">translations</option>
-            <option value="literary spaces">literary spaces</option>
-            <option value="bacon">bacon</option>
-            <option value="crochet">crochet</option>
-            <option value="latin">latin</option>
-            <option value="pet fashion">pet fashion</option>
-            <option value="embroidery">embroidery</option>
-            <option value="workshops">workshops</option>
-            <option value="glass">glass</option>
-            <option value="pottery">pottery</option>
-            <option value="typography">typography</option>
-            <option value="social practice">social practice</option>
-            <option value="weaving">weaving</option>
-            <option value="letterpress">letterpress</option>
-            <option value="residencies">residencies</option>
-            <option value="quilts">quilts</option>
-            <option value="chiptune">chiptune</option>
-            <option value="taxidermy">taxidermy</option>
-            <option value="other"">other</option>
-        </select>
-      </div>
-
-      <div class="form__fieldset">
-        <label for="country_code" class="form__label">Country Code:</label>
-        <select name="country_code" id="country_code" class="form__input form__select">
+      <div class=" form__fieldset">
+          <label for="country_code" class="form__label">Country Code:</label>
+          <select name="country_code" id="country_code" class="form__input form__select">
             <option value="us">us</option>
             <option value="de">de</option>
             <option value="gb'">gb</option>
@@ -247,62 +249,59 @@
             <option value="lu">lu</option>
             <option value="si">si</option>
             <option value="other">other</option>
-        </select>
-      </div>
+          </select>
+    </div>
 
-      <div class="form__fieldset">
-        <label for="currency_code" class="currency__label">Currency Code:</label>
-        <select name="currency_code" id="currency_code" class="form__input form__select">
-            <option value="usd">usd</option>
-            <option value="eur">eur</option>
-            <option value="gbp'">gbp</option>
-            <option value="cad">cad</option>
-            <option value="sgd">sgd</option>
-            <option value="sek">sek</option>
-            <option value="aud">aud</option>
-            <option value="mxn">mxn</option>
-            <option value="dkk">dkk</option>
-            <option value="nzd">nzd</option>
-            <option value="jpy">jpy</option>
-            <option value="nok">nok</option>
-            <option value="chf">chf</option>
-            <option value="pln">pln</option>
-            <option value="other">other</option>
-        </select>
-      </div>
+    <div class="form__fieldset">
+      <label for="currency_code" class="currency__label">Currency Code:</label>
+      <select name="currency_code" id="currency_code" class="form__input form__select">
+        <option value="usd">usd</option>
+        <option value="eur">eur</option>
+        <option value="gbp'">gbp</option>
+        <option value="cad">cad</option>
+        <option value="sgd">sgd</option>
+        <option value="sek">sek</option>
+        <option value="aud">aud</option>
+        <option value="mxn">mxn</option>
+        <option value="dkk">dkk</option>
+        <option value="nzd">nzd</option>
+        <option value="jpy">jpy</option>
+        <option value="nok">nok</option>
+        <option value="chf">chf</option>
+        <option value="pln">pln</option>
+        <option value="other">other</option>
+      </select>
+    </div>
 
 
-      <form>
-        <legend>Is it a staff pick?</legend>
-    
-        <input type="radio" id="TRUE" name="staff_pick">
-        <label for="TRUE">Yes</label><br/>
-    
-        <input type="radio" id="FALSE" name="staff_pick">
-        <label for="FALSE">No</label>
-    </form>
-    
+    <!-- <form>
+      <legend>Is it a staff pick?</legend>
 
-      <form>
-     
-          <legend>Spotlight</legend>
-      
-          <input type="radio" id="TRUE" name="spotlight">
-          <label for="TRUE">Yes</label><br/>
-      
-          <input type="radio" id="FALSE" name="spotlight">
-          <label for="FALSE">No</label>
-        
-      </form>
-      
+      <input type="radio" id="TRUE" name="staff_pick">
+      <label for="TRUE">Yes</label><br />
 
-      <div class="form__fieldset">
-        <input
-          class="form__submit form__input"
-          type="submit"
-          value="Check odds"
-        />
-      </div>
-    </form>
-  </body>
+      <input type="radio" id="FALSE" name="staff_pick">
+      <label for="FALSE">No</label>
+    </form> -->
+
+
+    <!-- <form>
+
+      <legend>Spotlight</legend>
+
+      <input type="radio" id="TRUE" name="spotlight">
+      <label for="TRUE">Yes</label><br />
+
+      <input type="radio" id="FALSE" name="spotlight">
+      <label for="FALSE">No</label>
+
+    </form> -->
+
+
+    <div class="form__fieldset">
+      <input class="form__submit form__input" type="submit" value="Check odds" />
+    </div>
+  </form>
+</body>
+
 </html>
