@@ -3,8 +3,7 @@ from datetime import datetime
 import json
 from flask import render_template, request
 import pandas as pd
-
-
+import datetime
   
 
 def create_app():
@@ -34,7 +33,14 @@ def create_app():
             column_list=list(dict1.keys())
             df = pd.DataFrame(columns=column_list)
             df.loc[len(df)] = feature_list
-            print(df)          
+            date1= dict1.get("date_created")
+            date2= dict1.get("date_launched")
+            date3 = datetime.datetime.strptime(date1,"%Y-%m-%d")
+            date4 = datetime.datetime.strptime(date2,"%Y-%m-%d")
+            unixtime = datetime.datetime.timestamp(date4)-datetime.datetime.timestamp(date3)
+            
+            print(unixtime)    
+                  
         return render_template('next.html', title='User')
 
     
