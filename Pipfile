@@ -8,6 +8,7 @@ pandas = "*"
 flask = "*"
 sklearn = "*"
 scipy = "*"
+gunicorn = "*"
 
 [dev-packages]
 
