@@ -64,6 +64,6 @@ model_logr.fit(X_train, y_train)
 
 
 if __name__ == "__main__":
-    filename = "test_model"
+    filename = "logistic_regression_model"
     pickle.dump(model_logr, open(os.getcwd() + "\\models\\" + filename, "wb"))
 

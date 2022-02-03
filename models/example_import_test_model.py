@@ -1,3 +1,14 @@
+"""
+Loads a simple logistic regression model and random forest model for the 
+kickstarter dataset.
+
+To use the models in this folder, copy and paste this code except __main__
+
+Model names:
+model_logr
+model_rf
+"""
+
 import pickle, os
 
 import pandas as pd
@@ -23,9 +34,9 @@ import matplotlib.pyplot as plt
 # saving model
 import pickle
 
-
-file_path = os.path.join(os.getcwd(), "models\\test_model")
-loaded_model = pickle.load(open(os.getcwd() + r"\\models\\test_model", "rb"))
+model_logr = pickle.load(
+    open(os.getcwd() + r"\\models\\logistic_regression_model", "rb")
+)
 
 
 if __name__ == "__main__":
@@ -50,5 +61,5 @@ if __name__ == "__main__":
         }
     )
 
-    print(loaded_model.predict(test_input))
+    print(model_logr.predict(test_input))
 
