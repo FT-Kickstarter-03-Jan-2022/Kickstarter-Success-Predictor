@@ -1,21 +1,23 @@
+"""
+Run this file to export logistic regression and random forest models 
+"""
+
 import pandas as pd
 import numpy as np
 
 # encoding, preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from category_encoders import OneHotEncoder
+from category_encoders import OneHotEncoder, OrdinalEncoder
 
 # sklearn & modelling
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import make_pipeline
 
 # metrics
 from sklearn.metrics import plot_confusion_matrix
 from sklearn.metrics import precision_score, recall_score
-
-# visualization
-import matplotlib.pyplot as plt
 
 # saving model
 import pickle
@@ -54,6 +56,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
+# logistic regression model
 model_logr = make_pipeline(
     OneHotEncoder(use_cat_names=True),
     StandardScaler(),
@@ -62,8 +65,28 @@ model_logr = make_pipeline(
 
 model_logr.fit(X_train, y_train)
 
+# random forest model: CV search already performed
+model_rf = make_pipeline(
+    OrdinalEncoder(),
+    RandomForestClassifier(
+        n_estimators=150,
+        criterion="gini",
+        max_depth=45,
+        min_samples_leaf=4,
+        min_samples_split=8,
+        n_jobs=-1,
+    ),
+)
+
+model_rf.fit(X, y)
 
 if __name__ == "__main__":
-    filename = "logistic_regression_model"
-    pickle.dump(model_logr, open(os.getcwd() + "\\models\\" + filename, "wb"))
+    logr_filename = "logistic_regression_model"
+    pickle.dump(
+        model_logr, open(os.getcwd() + "\\models\\" + logr_filename, "wb")
+    )
 
+    rf_filename = "random_forest_model"
+    pickle.dump(
+        model_logr, open(os.getcwd() + "\\models\\" + rf_filename, "wb")
+    )
