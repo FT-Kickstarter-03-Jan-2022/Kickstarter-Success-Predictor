@@ -1,0 +1,12 @@
+{% extends "next.html" %}
+
+{% block content %}
+
+<h1 style="font-size:90%;color:#acacac;"><u>We predict that your Kickstarter campaign will likely: Succeed</h1>
+<div class="whatever" style="font-size:120%;color:#acacac;">
+    <div><img src="{{url_for('static', filename='prediction_graph.png')}}"  width="300" height="300" /></div>
+   
+    </div>
+</div>
+
+{% endblock %}
