@@ -4,7 +4,7 @@ Ever wanted to know if your big idea for a kickstart project would be a success?
 
 ## You can find the App here
 
-Click this link to be taken to the webpage --> [Kickstarter App](https://kickstartesuccessds34.herokuapp.com/) 
+Click this link to be taken to the webpage --> [Kickstarter App](https://kickstarter-0222.herokuapp.com/)
 
 ## How to use
 Visit the link to our [app](https://kickstartesuccessds34.herokuapp.com/) here you can give the required information about your Kickstarter project. Click check odds and it will return a prediction based on our machine learning model of whether the campaign will be a success or failure.   
