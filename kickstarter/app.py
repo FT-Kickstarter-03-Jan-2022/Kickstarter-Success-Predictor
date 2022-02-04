@@ -5,6 +5,7 @@ import pandas as pd
 from flask import redirect, url_for
 import datetime
 import pickle
+import os
 
 # The code will run with model_gb2 (added to models folder). 
 # make sure to adjust datatypes in df and number of features to your model to get it running
@@ -56,7 +57,8 @@ def create_app():
             df.loc[len(df)] = values
             df.set_index(['index'], inplace=True)
             
-            filename = 'model_gb2'
+            app_dir = os.path.dirname(os.path.abspath(__file__))
+            filename =os.path.join(app_dir, 'model_gb2')
             grb_model = pickle.load(open(filename, 'rb'))
 
             y_pred = grb_model.predict(df)[0]
