@@ -56,7 +56,7 @@ def create_app():
             df.loc[len(df)] = values
             df.set_index(['index'], inplace=True)
             
-            filename = "./model_gb2"
+            filename = 'model_gb2'
             grb_model = pickle.load(open(filename, 'rb'))
 
             y_pred = grb_model.predict(df)[0]
